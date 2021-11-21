@@ -1,2 +1,2 @@
 # Python-Course
-Repository where I develop my python course
+Repository where I develop a python course
