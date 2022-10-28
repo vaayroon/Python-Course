@@ -20,6 +20,7 @@ def div(num1, num2):
 
 
 try:
+    standard_input = 1, 2, '3', 4, 2, 15, -4  #standard inputs to AREPL vscode extension
     op1 = (int(input("Introduce the first operator --> ")))
     op2 = (int(input("Introduce the second operator --> ")))
     operator = input("Introduce the operation's number (addition: 1, subtraction: 2, multiplication: 3, division: 4) --> ")
@@ -53,8 +54,8 @@ def divide():
         print("The result of the division is: " + str(ope1/ope2))
     except ValueError:
         print("The introduced value is not allowed")
-    except:
-        print("An unexpected exception occurred")
+    except Exception as e:
+        print("An unexpected exception occurred: ", e)
     finally:
         print("Just a print test, to test 'Finally'")
         # Finally is so useful when we are working with database.
@@ -86,8 +87,8 @@ def evaluate_age(age):
     elif age < 100:
         return "Take care of yourself ..."
 
-
-print(evaluate_age(-15))
+eva1 = (int(input("Introduce your age: ")))
+print(evaluate_age(eva1))
 
 print("Ojo piojo")
 

@@ -8,7 +8,7 @@ class Car():
     def start_car(self, starting):
         self.__rolling = starting
         if self.__rolling:
-            checked = self.internal_check()
+            checked = self.__internal_check()
         if(self.__rolling and checked):
             return "The car is rolling"
         elif(self.__rolling and checked == False):
@@ -20,7 +20,7 @@ class Car():
         print("The car has {0} wheels, its weight is {1} and its length is {2} "
             .format(self.__wheels,self.__carweigth, self.__carlength))
 
-    def internal_check(self):
+    def __internal_check(self):
         print("Performing internal checking")
 
         self.fuel = "OK"
@@ -43,9 +43,8 @@ print("---------Now we create another instance---------")
 
 myRenault = Car()
 
-print(myCar.start_car(True))
-myCar.state()
-
+print(myRenault.start_car(True))
+myRenault.state()
 
 '''The initial values of the class variables are specified in a constructor
 (constructor method)
@@ -61,5 +60,6 @@ inside the constructor
 
 '''Encapsulate methods: ¿Utility?
 Maybe to check the integrity of the car before start the engine
+To encapsualte a method we can use the same way: __internal_check(self)
 '''
 
